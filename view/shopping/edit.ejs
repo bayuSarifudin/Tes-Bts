@@ -1,0 +1,29 @@
+<div>
+	<h1>edit shopping</h1>
+	<div>
+		<form action="/shopping/<%= shopping._id %>?_method=PUT" method="POST" novalidate>
+			<div class="mb-3">
+				<label class="form-label" for="title">name</label>
+				<input
+					type="text"
+					id="title"
+					value="<%= shopping.name %> "
+					name="shopping[name]"
+					required
+				/>
+			</div>
+			<div>
+				<label class="form-label" for="description">date</label>
+				<input
+					type="text"
+					id="title"
+					value="<%= shopping.date %> "
+					name="shopping[date]"
+					required
+				/>
+			</div>
+			<button>done</button>
+		</form>
+		<a href="/shopping/<%= shopping._id %>" class="btn btn-danger">Cancel</a>
+	</div>
+</div>

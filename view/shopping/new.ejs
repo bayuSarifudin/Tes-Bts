@@ -1,0 +1,17 @@
+<div class="row">
+	<h1>list your new shopping</h1>
+	<div>
+		<form action="/shopping" method="POST">
+			<div class="mb-3">
+				<label for="title">name</label>
+				<input type="text" id="title" name="shopping[name]" required />
+			</div>
+			<div class="mb-3">
+				<label for="description">date</label>
+				<input type="text" id="title" name="shopping[date]" required />
+			</div>
+			<button>Add Shop</button>
+		</form>
+		<a href="/shopping">Cancel</a>
+	</div>
+</div>

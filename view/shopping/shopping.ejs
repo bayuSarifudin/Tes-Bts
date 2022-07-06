@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping</title>
+	</head>
+	<body>
+		<h1>All Shopping</h1>
+
+		<% for (let shop of shopping) { %>
+		<div>
+			<div>Shop</div>
+			<div>
+				<h5><%= shop.name %></h5>
+				<a href="/shopping/<%= shop._id  %> ">See Details</a>
+			</div>
+		</div>
+		<% } %>
+	</body>
+</html>
