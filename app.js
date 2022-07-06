@@ -83,6 +83,23 @@ app.delete('/shopping/:id', async (req, res) => {
 	res.redirect('/shopping');
 });
 
+// this is a fake sign up, i am sorry that i couldnt make it in time, but i could make
+// a fake signup to make a new user with the hashed and salted password using passportJs
+app.get('/fakeuser', async (req, res) => {
+	const user = new User({
+		username: 'baybay',
+		email: 'blabla@gmail.com',
+		phone: 75628296532,
+		country: 'indonesia',
+		city: 'jakarta',
+		postcode: 67868,
+		name: 'bayu',
+		address: 'jakarta',
+	});
+	const newUser = await User.register(user, 'thisispassword');
+	res.send(newUser);
+});
+
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
 });
